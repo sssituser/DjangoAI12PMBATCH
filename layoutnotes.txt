@@ -1,0 +1,15 @@
+1.create the project
+2.Create the application
+3.Create the templates folder
+4.create myapp folder in templates folder
+5.Create htmls files along base.html
+6.In Base html Add bootstrap links
+7.Create a Navbar
+9.Provide the links the webpages
+10.Add after the Navbar
+{%block blockName%}
+{%end block%}
+11.goto html pages , Inherit base.html
+<%extends 'myapp/base.html'%>
+12.views.py functions
+13.urls.py add the names
