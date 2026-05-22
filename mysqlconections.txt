@@ -1,0 +1,26 @@
+1.create project
+    django-admin startprojcect modelmysqlproject
+2.cd modelmysqlproject
+3.python manage.py startapp myapp
+4.create model class in models.py in the application
+    class Student(models.Model):
+        stuid = models.IntegerField()
+        stuname = models.CharacField(max_length=50)
+        stumarsk = models.IntegerField()
+5.In settings.py
+        INSTALLE_APPS=[
+
+            'myapp',
+        ]
+
+6.set setting mysql database in DATA_BASES=[
+
+]   
+
+mysql
+user 
+password
+host
+port
+6.python manage.py makemigrations
+7.python manage.py migrates
