@@ -19,6 +19,7 @@
                             {%csrf_token%}
                             {{form.as_p}}
                             <button class="btn btn-sm btn-primary">Create</button>
+                            <a href="{%url 'products'%}" class="btn btn-sm btn-warning float-end">Back</a>
                         </form>
                     </div>
                 </div>
