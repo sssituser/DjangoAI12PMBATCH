@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+{%load widget_tweaks%}
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css">
+
+<!-- MDBootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header bg-danger text-white text-center">
+                        <h3>Do You Want to Delete The Employee ?</h3>
+                    </div>
+                    <div class="card-body">
+                       <form action="" method="POST">
+                            {%csrf_token%}
+                         <h3>Employee ID : {{employee.EmployeeId}}</h3>
+                        <h3>Employee Name : {{employee.EmployeeName}}</h3>
+                        <h3>Employee Salary : {{employee.EmployeeSalary}}</h2>
+                        <button class="btn btn-danger btn-sm"><i class="fa fa-trash-alt text-white fa fa-2x"></i></button>
+                        <a href="/" class="btn btn-outline-amber btn-sm float-right"><i class="fa fa-arrow-alt-circle-right fa fa-2x"></i></a>
+                       </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

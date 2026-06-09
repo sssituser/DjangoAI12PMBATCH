@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%load widget_tweaks%}
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+      <!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css">
+
+<!-- MDBootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+                <div class="card mt-5 animated bounceInUp">
+                    <div class="card-header bg-secondary text-white text-center">
+                        <p class="h3">Register/Edit Employee</p>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="POST">
+                            {%csrf_token%}
+                            {%render_field form.EmployeeId class="form-control mb-2" placeholder='Employee Id'%}
+                            {%render_field form.EmployeeName class="form-control mb-2" placeholder='Employee Name'%}
+                            {%render_field form.EmployeeSalary class="form-control mb-2" placeholder='Employee Salary'%}
+                            <button class="btn btn-sm btn-outline-primary">Save</button>
+                            <a href="/" class="btn btn-sm btn-outline-warning float-right" >BacktoList</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{%load widget_tweaks%}
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+  <!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css">
+
+<!-- MDBootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flext justify-content-center">
+            <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat alias vel aperiam, veniam, quas atque ipsa doloribus ullam voluptate odio laboriosam harum excepturi minus quia vero ab velit. Tenetur qui iste soluta nemo atque, delectus, nobis molestiae magni facilis dolorum, inventore tempore quam. Repellendus rerum, delectus tenetur velit quod doloremque.
+                <a href="/create" class="btn btn-sm btn-outline-primary">Create</a>
+            </p>
+
+            <div class="col-md-8">
+               {%if employee_list%}
+                <table class="table table-bordered table-striped table-hover text-center animated jackInTheBox">
+                    <thead>
+                        <tr>
+                            <th class="bg-primary text-white font-weight-bold">Employee ID</th>
+                            <th class="bg-primary text-white font-weight-bold">Employee Name</th>
+                            <th class="bg-primary text-white font-weight-bold">Employee Salary</th>
+                            <th class="bg-primary text-white font-weight-bold">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%for emp in employee_list%}
+                        <tr>
+                            <td>{{emp.EmployeeId}}</td>
+                            <td>{{emp.EmployeeName}}</td>
+                            <td>{{emp.EmployeeSalary}}</td>
+                            <td>
+                                <a href="/{{emp.EmployeeId}}">
+                                    <i class="fa fa-eye text-primary fa-2x"></i>
+                                </a>
+                                <a href="edit/{{emp.EmployeeId}}/">
+                                    <i class="fa fa-pen-square text-success fa-2x ml-2"></i>
+                                </a>
+
+                                 <a href="delete/{{emp.EmployeeId}}/">
+                                    <i class="fa fa-trash-alt text-danger fa-2x ml-2"></i>
+                                </a>
+
+
+                            </td>
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+               {%else%}
+               <p class="h2 text-white text-center mt-5 bg-danger">Records notFound</p>
+               {%endif%}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
