@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Cards</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css">
+
+    <!-- MDBootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
+
+    <style>
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    
+    <div class="row mt-5">
+        <div class="col-md-3">
+            <div class="card animated flip">
+                <img src="{%static 'images/img1.jpg'%}" alt="">
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima dolore maiores aspernatur est ipsum possimus excepturi esse quas recusandae.</p>
+                    <button class="btn btn-md btn-success">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card animated flip">
+                <img src="{%static 'images/img2.jpg'%}" alt="">
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima dolore maiores aspernatur est ipsum possimus excepturi esse quas recusandae.</p>
+                    <button class="btn btn-md btn-success">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card animated flip">
+                <img src="{%static 'images/img3.jpg'%}" alt="">
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima dolore maiores aspernatur est ipsum possimus excepturi esse quas recusandae.</p>
+                    <button class="btn btn-md btn-success">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card animated flip">
+                <img src="{%static 'images/img4.jpg'%}" alt="">
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima dolore maiores aspernatur est ipsum possimus excepturi esse quas recusandae.</p>
+                    <button class="btn btn-md btn-success">Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="row mt-5">
+        <div class="col-md-3">
+            <div class="card animated flip">
+                <img src="{%static 'images/img1.jpg'%}" alt="">
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima dolore maiores aspernatur est ipsum possimus excepturi esse quas recusandae.</p>
+                    <button class="btn btn-md btn-success">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card animated flip">
+                <img src="{%static 'images/img2.jpg'%}" alt="">
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima dolore maiores aspernatur est ipsum possimus excepturi esse quas recusandae.</p>
+                    <button class="btn btn-md btn-success">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card animated flip">
+                <img src="{%static 'images/img3.jpg'%}" alt="">
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima dolore maiores aspernatur est ipsum possimus excepturi esse quas recusandae.</p>
+                    <button class="btn btn-md btn-success">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card animated flip">
+                <img src="{%static 'images/img4.jpg'%}" alt="">
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima dolore maiores aspernatur est ipsum possimus excepturi esse quas recusandae.</p>
+                    <button class="btn btn-md btn-success">Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+   
+</div>
+
+</body>
+</html>

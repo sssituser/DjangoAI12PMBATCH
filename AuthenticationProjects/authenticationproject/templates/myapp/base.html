@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css">
+
+    <!-- MDBootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a href="/" class="navbar-brand">Home</a>
+        <div class="container">
+               <ul class="nav">
+            <li class="nav-item">
+                <a href="/java" class="nav-link">Java Exam</a>
+            </li>
+            <li class="nav-item">
+                <a href="/python" class="nav-link">Python Exam</a>
+            </li>
+            <li class="nav-item">
+                <a href="/ui" class="nav-link">UI Exam</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    {%block body_block%}
+    {%endblock%}
+</body>
+</html>
