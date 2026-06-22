@@ -1,5 +1,5 @@
 """
-URL configuration for authenticationproject project.
+URL configuration for viewsproject1 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
@@ -20,5 +20,5 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('myapp.urls')),
-    path('accounts/',include('django.contrib.auth.urls'),name='login'),
+    path('accounts/',include('django.contrib.auth.urls')),
 ]

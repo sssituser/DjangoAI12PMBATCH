@@ -6,5 +6,6 @@ urlpatterns =[
     path('java/',views.javaex),
     path('python/',views.pythonex),
     path('ui/',views.uiex),
-    
+    path('register/',views.singup),
+    path('logout/',views.logout_view,name="logout")
 ]
