@@ -22,12 +22,13 @@ def singup(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            user.set_password = (user.set_password)
+            user = form.save(commit=False)
+            user.set_password(user.password)
             user.save()
-            return redirect('/accounts/login')
+            return redirect('/accounts/login/')
     return render(request,'myapp/register.html',{'form':form})
 
 def logout_view(request):
     logout(request)
     return redirect('login')
+

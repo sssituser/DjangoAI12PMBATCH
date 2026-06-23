@@ -11,11 +11,7 @@
                     <div class="card-body">
                             <form action="" method="POST">
                                 {%csrf_token%}
-                            
-                                 {{form.first_name|attr:"Placeholder : First Name"|add_class:"form-control form-group"}}
-                                 {{form.last_name|attr:"Placeholder : Last Name"|add_class:"form-control form-group"}}
-                                 {{form.username|attr:"Placeholder : User Name"|add_class:"form-control form-group"}}
-                                  {{form.password|attr:"Placeholder : Password"|add_class:"form-control form-group"}}
+                                 {{form.as_p}}
                                 <button class="btn btn-sm  btn-primary">Register</button>
                                 <a href="/" class="btn btn-warning btn-sm float-right">Back</a>
                             </form>
