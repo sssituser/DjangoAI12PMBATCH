@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%load widget_tweaks%}
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css">
+
+    <!-- MDBootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-primary  text-white">
+        <a href="/" class="nav-item navbar-brand text-white">Home</a>
+         <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="/javaex" class="nav-link text-white">JavaExam</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/pythonex" class="nav-link text-white">PythonExam</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="/uiex" class="nav-link text-white">UIExam</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="/register" class="nav-link text-white">Signup</a>
+                </li>
+                 <li class="nav-item">
+                   <form action="{%url 'logout'%}" method="POST">
+                    {%csrf_token%}
+                        <button class="btn btn-primary btn-sm">logout</button>
+                   </form>
+                </li>
+            </ul>
+         </div>
+    </nav>
+    {%block content_block%}
+    {%endblock%}
+</body>
+</html>
