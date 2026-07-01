@@ -1,0 +1,4 @@
+1. React Application
+        npm run dev
+2. Backen(Json server)
+        npm start
