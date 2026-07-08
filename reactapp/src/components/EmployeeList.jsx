@@ -5,7 +5,7 @@ import axios from "axios";
 export default function EmployeeList(){
     let[employees,setEmployees]=useState([])
     function getEmployees(){
-        axios.get("http://localhost:9000/employees")
+        axios.get("http://localhost:9000/employees/")
         .then((res)=>{
             setEmployees(res.data)
         })
@@ -16,7 +16,6 @@ export default function EmployeeList(){
     useEffect(()=>{
         getEmployees()
     },[])
-
     function del(id){
         axios.delete(`http://localhost:9000/employees/${id}`)
         .then(()=>{

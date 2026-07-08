@@ -4,9 +4,7 @@ import { useParams } from "react-router-dom";
 
 export default function Find(){
     let {id} = useParams()
-    
     let[employee,setEmployee]=useState({});
-
     function getEmployeeById(){
         axios.get(`http://localhost:9000/employees/${id}`)
         .then((res)=>{
@@ -18,10 +16,9 @@ export default function Find(){
         getEmployeeById()
 
     },[])
-
     return(
         <React.Fragment>
-               
+       
                 <div className="container mt-5">
                     <div className="row d-flex justify-content-center">
                         <div className="col-md-5">
